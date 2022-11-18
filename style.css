@@ -1,13 +1,23 @@
+:root {
+    --azul-dnc: #0C70F2;
+    --preto-dnc: #303030;
+    --cinza-hover: #C9C9C9;
+
+    --fonte-padrao: 'Inter';
+}
+
 body {
     margin: 0px;
     padding: 0px;
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
+    background-repeat: no-repeat;
 }
 
 #principal {
     width: 100%;
     height: 100px;
     border: 1px solid black;
-    background-color: #303030;
+    background-color: var(--preto-dnc);
     border-bottom-color: #BABABA;
 
     display: flex;
@@ -15,44 +25,283 @@ body {
     align-items: center;
 }
 
-    #menu {
-        display: flex;
-        width: 50%;
-        justify-content: space-around;
+#menu {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
 
+    align-items: center;
+    margin-left: 5%;
+}
+
+#principal div a {
+    font-family: var(--fonte-padrao);
+    font-weight: 600;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#principal div a:hover {
+    color: var(--cinza-hover);
+
+}
+
+#principal button {
+    margin-right: 5%;
+    border: 0px;
+    background: var(--azul-dnc);
+    width: 80px;
+    height: 40px;
+
+    box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
+
+    font-family: var(--fonte-padrao);
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+header {
+    font-family: var(--fonte-padrao);
+    color: #FFFFFF;
+}
+
+header h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 80px;
+
+    margin-bottom: 20px;
+}
+
+header h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+header .invert {
+    background-color: black;
+    font-weight: bold;
+    padding: 5px;
+}
+
+form {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 30px;
+    font-weight: 600;
+    width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+form input {
+    border-radius: 10px;
+    height: 30px;
+    border: 0px;
+    font-size: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+form label {
+    margin: 10px 0px 10px 0px;
+}
+
+form input::placeholder {
+    color: rgba(57, 57, 57, 0.5);
+}
+
+.checkbox-itens label {
+    font-size: 25px;
+}
+
+.checkbox-itens {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.7);
+}
+
+input[type="submit"] {
+    background: rgba(12, 112, 242, 0.9);
+    width: 100%;
+    height: 56px;
+    font-size: 32px;
+    color: white;
+    margin-top: 100px;
+
+
+    box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background: var(--azul-dnc);
+    height: fit-content;
+    width: 100%;
+}
+
+footer .linha1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 330px;
+}
+
+footer h5 {
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-family: var(--fonte-padrao);
+    font-size: 18px;
+    background-color: var(--preto-dnc);
+    border-radius: 10px;
+
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 15px;
+}
+
+footer ul li {
+    text-align: center;
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 18px;
+    font-weight: 600;
+
+    margin: 20px 0px 20px 0px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: var(--cinza-hover);
+}
+
+footer .endereco {
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-family: var(--fonte-padrao);
+    font-size: 18px;
+    width: 20%;
+}
+
+footer .linha2 {
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px 0px 35px 0px;
+
+    font-family: var(--fonte-padrao);
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+
+}
+
+footer .linha2 a {
+    font-family: var(--fonte-padrao);
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+footer .linha2 a:hover {
+    color: var(--cinza-hover);
+}
+
+footer .linha2 a:first-child {
+    border-right: 3px solid white;
+}
+
+
+@media only screen and (max-width: 600px){
+
+    /* Menu */
+    #principal{
+        flex-direction: column;
+        height: auto;
+    }
+
+    #menu{
+        flex-direction: column;
+        width: 100%;
+        margin: 0px;
+    }
+
+    #menu a{
+        height: 50px;
         align-items: center;
-        margin-left: 5%;
+        justify-content: center;
     }
 
-    #principal div a {
-        font-family: 'Inter', sans-serif;
-        font-weight: 600;
-        font-size: 25px;
-        color: #FFFFFF;
-        text-decoration: none;
+    #principal button{
+        width: 100%;
+        margin: 0px;
     }
 
-    #principal div a:hover {
-        color: #CCCCCC;
-
+    /* Section */
+    section h1{
+        font-size: 38px;
     }
 
-    #principal button {
-        margin-right: 5%;
-        border: 0px;
-        background: #0C70F2;
-        width: 80px;
-        height: 40px;
+    section h2{
+        font-size: 22px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 
-        box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
-
-        font-family: 'Inter';
+    form{
+        width: 95%;
         font-size: 20px;
-        font-weight: 600;
-        color: #FFFFFF;
-        cursor: pointer;
     }
 
-#second {
-    background-color: linear-gradient(blue, black);
+    .checkbox-itens label{
+        font-size: 17px;
+    }
+
 }
